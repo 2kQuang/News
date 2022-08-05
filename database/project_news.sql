@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 05, 2022 at 07:52 AM
+-- Generation Time: Aug 05, 2022 at 04:34 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -133,7 +133,7 @@ CREATE TABLE `product` (
   `Title` text NOT NULL,
   `content` text NOT NULL,
   `image` text NOT NULL,
-  `categori_id` int(11) NOT NULL
+  `categori_id` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -178,7 +178,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `role_id`) VALUES
-(1, 'admin', 'admin@admin.com', NULL, '$2y$10$cjLLVXaACnkTtvJllxF5RemCdIQdWWZkk8MRvgUESNy8oFu0PzD9q', 'omJfodGL23YHtCQrXhjS7tQouZ3HSo5niSfI6ujKoi712YlpMd0pcf9zBpXU', '2022-07-26 01:46:23', '2022-07-26 01:46:23', 1),
+(1, 'admin', 'admin@admin.com', NULL, '$2y$10$cjLLVXaACnkTtvJllxF5RemCdIQdWWZkk8MRvgUESNy8oFu0PzD9q', 'RiYu8bHBe9ZbBXU2SEso0kCi0qOa94CRpp4QvoXMIVBlSgqiFHUx75XaFcIM', '2022-07-26 01:46:23', '2022-07-26 01:46:23', 1),
 (2, 'user', 'user@gmail.com', NULL, '$2y$10$dDlap9275q0yl6Dm2hB7ZeanQyw6oSqdhwqXLWrsL29ahBMBOGl4.', NULL, '2022-07-26 01:54:27', '2022-07-26 01:54:27', 2);
 
 --
@@ -228,8 +228,7 @@ ALTER TABLE `personal_access_tokens`
 -- Indexes for table `product`
 --
 ALTER TABLE `product`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `categori_id` (`categori_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `roles`
@@ -253,7 +252,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `contact`
@@ -283,7 +282,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -300,12 +299,6 @@ ALTER TABLE `users`
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `product`
---
-ALTER TABLE `product`
-  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`categori_id`) REFERENCES `categories` (`id`);
 
 --
 -- Constraints for table `users`
