@@ -12,7 +12,7 @@
                         <div class="tn-img">
                             <img src="{{$item['image']}}" width="540px" height="345px"/>
                             <div class="tn-title">
-                                <a href="">{{$item['Title']}}</a>
+                                <a href="{{route('details',['id'=>$item['id']])}}">{{$item['Title']}}</a>
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                             <div class="tn-img">
                                 <img src="{{$item['image']}}" width="270px" height="172"/>
                                 <div class="tn-title">
-                                    <a href="">{{$item['Title']}}</a>
+                                    <a href="{{route('details',['id'=>$item['id']])}}">{{$item['Title']}}</a>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
                             <div class="cn-img">
                                 <img src="{{$item['image']}}" width="255px" height="163px"/>
                                 <div class="cn-title">
-                                    <a href="">{{$item['Title']}}</a>
+                                    <a href="{{route('details',['id'=>$item['id']])}}">{{$item['Title']}}</a>
                                 </div>
                             </div>
                         </div>
@@ -144,7 +144,7 @@
                             <div class="cn-img">
                                 <img src="{{$item['image']}}" width="255px" height="163px"/>
                                 <div class="cn-title">
-                                    <a href="">{{$item['Title']}}</a>
+                                    <a href="{{route('details',['id'=>$item['id']])}}">{{$item['Title']}}</a>
                                 </div>
                             </div>
                         </div>
@@ -193,7 +193,7 @@
                             <div class="cn-img">
                                 <img src="{{$item['image']}}" width="255px" height="163px"/>
                                 <div class="cn-title">
-                                    <a href="">{{$item['Title']}}</a>
+                                    <a href="{{route('details',['id'=>$item['id']])}}">{{$item['Title']}}</a>
                                 </div>
                             </div>
                         </div>
@@ -234,7 +234,7 @@
                             <div class="cn-img">
                                 <img src="{{$item['image']}}" width="255px" height="163px"/>
                                 <div class="cn-title">
-                                    <a href="">{{$item['Title']}}</a>
+                                    <a href="{{route('details',['id'=>$item['id']])}}">{{$item['Title']}}</a>
                                 </div>
                             </div>
                         </div>
@@ -283,7 +283,7 @@
     <div class="mn-img">
         <img src="{{$item['image']}}" width="255px" height="163px"/>
         <div class="mn-title">
-            <a href="">{{$item['Title']}}</a>
+            <a href="{{route('details',['id'=>$item['id']])}}">{{$item['Title']}}</a>
         </div>
     </div>
 </div>
@@ -372,7 +372,7 @@
                         <h2>Read More</h2>
                         <ul>
                             @forelse ($categories_product as $item)
-                            <li><a href="">{{$item['Title']}}</a></li>
+                            <li><a href="{{route('details',['id'=>$item['id']])}}">{{$item['Title']}}</a></li>
                             @empty
                             <li><a href="">Lorem ipsum dolor sit amet</a></li>
                             <li><a href="">Pellentesque tincidunt enim libero</a></li>

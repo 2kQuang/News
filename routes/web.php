@@ -50,3 +50,5 @@ Route::get('contact',[contactController::class,'index'])->name('user.contact');
 Route::post('contact/store',[contactController::class,'store'])->name('contact.store');
 // Search
 Route::post('search',[searchController::class,'search'])->name('search');
+// details
+Route::get('details/{id}',[productsController::class,'show'])->name('details');

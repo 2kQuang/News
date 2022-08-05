@@ -94,7 +94,7 @@
                                 <div class="sn-img">
                                     <img src="{{$item['image']}}" width="224px" height="142px"/>
                                     <div class="sn-title">
-                                        <a href="">{{$item['Title']}}</a>
+                                        <a href="{{route('details',['id'=>$item['id']])}}">{{$item['Title']}}</a>
                                     </div>
                                 </div>
                             </div>
@@ -153,7 +153,7 @@
                                         <img src="{{$item['image']}}" width="100px" height="64px"/>
                                     </div>
                                     <div class="nl-title">
-                                        <a href="">{{$item['Title']}}</a>
+                                        <a href="{{route('details',['id'=>$item['id']])}}">{{$item['Title']}}</a>
                                     </div>
                                 </div>
                                 @empty
@@ -223,7 +223,7 @@
                             <div class="category">
                                 <ul>
                                     @forelse ($categories_product as $item)
-                                    <li><a href="">{{$item['Title']}}</a></li>
+                                    <li><a href="{{route('details',['id'=>$item['id']])}}">{{$item['Title']}}</a></li>
                                     @empty
                                     <li><a href="">National</a><span>(98)</span></li>
                                     <li><a href="">International</a><span>(87)</span></li>
@@ -248,7 +248,7 @@
                             <h2 class="sw-title">Tags Cloud</h2>
                             <div class="tags">
                                 @forelse ($categories_product as $item)
-                                    <a href="">{{$item['Title']}}</a>
+                                    <a href="{{route('details',['id'=>$item['id']])}}">{{$item['Title']}}</a>
                                     @empty
                                 <a href="">National</a>
                                 <a href="">International</a>

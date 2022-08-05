@@ -98,7 +98,8 @@ class productsController extends Controller
      */
     public function show($id)
     {
-        //
+        $details = product::where('id','=',$id)->get();
+        return response()->view('user.detail',['details'=>$details]);
     }
 
     /**
